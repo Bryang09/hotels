@@ -1,0 +1,53 @@
+.nav {
+  width: 100vw;
+  display: flex;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  background: #eee;
+
+  .button {
+    width: 10%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      cursor: pointer;
+      .line {
+        height: 4px;
+        width: 30px;
+        background: #333;
+        margin: 3px 0;
+        border-radius: 5px;
+      }
+      .line2 {
+        width: 15px;
+      }
+      .line3 {
+        width: 25px;
+      }
+    }
+  }
+
+  .title {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      height: 60px;
+      width: 150px;
+      background: url(./logo.svg) no-repeat center center / cover;
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    width: 20%;
+    background: pink;
+  }
+}
