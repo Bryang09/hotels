@@ -1,18 +1,78 @@
 .Hero {
   height: 100vh;
-  background: #eee;
+  background: #fcfcfc;
   display: flex;
-
-  .icons {
-    width: 10%;
-    background: red;
-    height: 100%;
-  }
 
   .img {
     width: 90%;
     height: 100%;
-    background: url(https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-      no-repeat center center / cover;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+      url(https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+        no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    .text {
+      width: 40%;
+      padding-left: 5vw;
+      margin-bottom: 2px;
+
+      h1 {
+        font-size: 60px;
+        margin-top: 0;
+        font-weight: 700;
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.modal {
+  height: 40%;
+  width: 40%;
+  // background: #333;
+
+  .top {
+    height: 50%;
+    background: rgba(86, 143, 220, 0.7);
+    display: flex;
+
+    .left,
+    .middle,
+    .right {
+      width: 33%;
+      border-right: 1px solid #fff;
+
+      h3 {
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      border: 0;
+    }
+  }
+
+  .bottom {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+
+    h4 {
+      border: 1px solid #095be2;
+      background: #095be2;
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+      font-weight: 400;
+      cursor: pointer;
+    }
   }
 }

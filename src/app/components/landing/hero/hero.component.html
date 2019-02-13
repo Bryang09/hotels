@@ -1,4 +1,42 @@
 <div class="Hero">
-  <div class="icons"></div>
-  <div class="img"></div>
+  <app-icons></app-icons>
+
+  <div class="img">
+    <div class="text">
+      <h3>{{ title | uppercase }}</h3>
+      <h1>Bryan Inc Hotels</h1>
+    </div>
+
+    <div class="modal">
+      <div class="top">
+        <div class="left">
+          <!-- <mat-form-field>
+            <input matInput [matDatepicker]="dp3" disabled />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="dp3"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </mat-form-field> -->
+          <h3 (click)="from.open()">From</h3>
+          <mat-form-field [(ngModel)]="left">
+            <input matInput [matDatepicker]="from" />
+            <mat-datepicker #from></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="middle">
+          <h3 (click)="to.open()">To</h3>
+          <mat-form-field>
+            <input matInput [matDatepicker]="to" />
+            <mat-datepicker #to></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="right"></div>
+      </div>
+
+      <div class="bottom">
+        <h4>Check Availability</h4>
+      </div>
+    </div>
+  </div>
 </div>
