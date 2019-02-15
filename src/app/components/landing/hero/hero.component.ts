@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: "app-hero",
@@ -8,7 +9,16 @@ import { Component, OnInit } from "@angular/core";
 export class HeroComponent implements OnInit {
   title: string = "Your vacation, your choice";
 
-  constructor() {}
+  myForm: FormGroup;
 
-  ngOnInit() {}
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.myForm = this.fb.group({
+      from: "",
+      to: ""
+    });
+
+    this.myForm.valueChanges.subscribe(console.log);
+  }
 }

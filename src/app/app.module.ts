@@ -1,23 +1,27 @@
+// MODULES
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NavComponent } from "./nav/nav.component";
-import { LandingComponent } from "./components/landing/landing.component";
-import { HeroComponent } from "./components/landing/hero/hero.component";
-
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { IconsComponent } from "./components/landing/hero/icons/icons.component";
 import {
   MatDatepickerModule,
   matDatepickerAnimations
 } from "@angular/material/datepicker";
+
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
-import { LandingQuestionsComponent } from './components/landing-questions/landing-questions.component';
+
+// COMPONENTS
+import { AppComponent } from "./app.component";
+import { NavComponent } from "./nav/nav.component";
+import { LandingComponent } from "./components/landing/landing.component";
+import { HeroComponent } from "./components/landing/hero/hero.component";
+import { IconsComponent } from "./components/landing/hero/icons/icons.component";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatSelectModule, MatButtonModule } from "@angular/material";
+import { Section1Component } from "./components/landing/section1/section1.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,7 @@ import { LandingQuestionsComponent } from './components/landing-questions/landin
     LandingComponent,
     HeroComponent,
     IconsComponent,
-    LandingQuestionsComponent
+    Section1Component
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,10 @@ import { LandingQuestionsComponent } from './components/landing-questions/landin
     MatInputModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
